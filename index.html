@@ -20,5 +20,7 @@
         </div>
     </div>
     <script src="app.js"></script>
+    <!-- This script is to prevent the button from staying focused after clicking it -->
+    <script type="text/javascript"> document.addEventListener('click', function(e) { if(document.activeElement.toString() == '[object HTMLButtonElement]'){ document.activeElement.blur(); } }); </script>
 </body>
 </html>
