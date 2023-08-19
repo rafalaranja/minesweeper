@@ -1,9 +1,8 @@
 body{
-    background-repeat: no-repeat;
     background-image: url("images/bg.svg");
     background-size: cover;
 }
 
 h1{
-    text-shadow: 3px 2px 2px #595959;
+    text-shadow: 3px 2px 2px #f97316;
 }
