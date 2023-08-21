@@ -51,9 +51,14 @@ function cellRevealer(cellArray){
             
         }
         else {
+            //reveal the cell and all the cells around it until it reaches a cell with a mine around it 
+            //and shows the number of mines around it
+            
+            //TO DO
             cell.innerHTML = "R";
             cell.className = "bg-zinc-300 hover:bg-zinc-200 text-dark font-bold py-2 px-4 border border-orange-500 rounded";
         }
+        
     }));
     cellArray.forEach(cell => cell.addEventListener("contextmenu", () => {      //flags the cell when right clicked
         if(cell.innerHTML == "F"){      //if the cell is already flagged, it changes it to a question mark
@@ -64,9 +69,8 @@ function cellRevealer(cellArray){
                 cell.innerHTML = "F";
                 cell.className = "bg-red-500 hover:bg-red-300 text-dark font-bold py-2 px-4 border border-orange-500 rounded";
         }
-        else if(cell.innerHTML == "R"){     //if the cell is revealed, it stays revealed
-                cell.innerHTML = "R";
-                cell.className = "bg-zinc-300 hover:bg-zinc-200 text-dark font-bold py-2 px-4 border border-orange-500 rounded";
+        else{     //if the cell is revealed, it stays revealed
+                return;
         }
     }));
 }
